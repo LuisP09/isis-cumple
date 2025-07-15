@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenida Isis ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Cinzel Decorative', cursive;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #0c3b2e, #000000); /* Slytherin verde a negro */
+      color: #fff;
+      text-align: center;
+    }
+
+    .contenedor {
+      position: relative;
+      z-index: 2;
+      padding-top: 20%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #4dd17c;
+      color: #c8facc;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-shadow: 0 0 8px #8ef0b0;
+      color: #e6ffe6;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+
+    .escritura {
+  font-size: 1.5rem;
+  text-shadow: 0 0 8px #8ef0b0;
+  color: #e6ffe6;
+  white-space: pre-wrap;
+  min-height: 3em;
+}
+
+  </style>
+  
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>✨ Bienvenida, Isis ✨</h1>
+    <!-- <p>Un hechizo de cumpleaños está a punto de comenzar... 🎂</p> -->
+    <p id="textoMagico" class="escritura"></p>
+
+  </div>
+
+  <div id="particles-js"></div>
+
+  <!-- Redirección automática -->
+  <script>
+    setTimeout(() => {
+      window.location.href = 'felicidades.html'; // Cambia por la página real
+    }, 6000);
+  </script>
+
+  <!-- Partículas mágicas -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#aaffcc" }, // Verde brillante/dorado suave
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" }
+        },
+        "opacity": {
+          "value": 0.8,
+          "random": true,
+          "anim": { "enable": true, "speed": 1, "opacity_min": 0.2, "sync": false }
+        },
+        "size": {
+          "value": 4,
+          "random": true,
+          "anim": { "enable": false, "speed": 20, "size_min": 0.1, "sync": false }
+        },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "top",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": false },
+          "resize": true
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+<script>
+  const mensaje = "Hoy, el mundo mágico brilla solo para ti, hermosa. 🌟";
+  const texto = document.getElementById('textoMagico');
+
+  let i = 0;
+  const velocidad = 60; // velocidad de escritura
+
+  function escribirTexto() {
+    if (i < mensaje.length) {
+      texto.innerHTML += mensaje.charAt(i);
+      i++;
+      setTimeout(escribirTexto, velocidad);
+    }
+  }
+
+  escribirTexto();
+</script>
+
+</body>
+</html>

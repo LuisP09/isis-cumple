@@ -1,0 +1,461 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+  body {
+      margin: 0;
+      padding: 0;
+      background: url('../images/hogwarts-suave.jpg') no-repeat center center fixed;
+      background-size: cover;
+      /* font-family: 'Poppins', sans-serif; */
+      font-family: 'Cinzel Decorative', cursive;
+      color: #fff;
+      overflow-x: hidden;
+  }
+
+/*/_Layout/*/
+#estrellas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('../images/hogwarts-suave.jpg') repeat;
+    z-index: 0;
+    opacity: 0.08;
+}
+
+.cumple-wrapper, header, footer {
+    position: relative;
+    z-index: 1;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+/*/INDEX/*/
+
+.cumple-wrapper {
+    background: url('../images/hogwarts-suave.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Cedarville Cursive', cursive;
+    padding-bottom: 50px;
+}
+
+.titulo-magico {
+    font-family: 'Harry P', serif;
+    font-size: 4em;
+    text-shadow: 2px 2px 10px #FFD700;
+}
+/*/_EncabezadoMagico/*/
+
+.titulo-magico {
+    font-family: 'Harry P', cursive;
+    font-size: 4rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 8px #fff;
+    animation: brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+    0% {
+        text-shadow: 2px 2px 8px #fff;
+    }
+
+    100% {
+        text-shadow: 2px 2px 20px #FFD700;
+    }
+}
+
+/*/_MensajeEspecial/*/
+/*.mensaje-especial {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}*/
+.mensaje-especial {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 30px;
+    color: #fff;
+}
+
+
+.mensaje-texto {
+    font-size: 1.4rem;
+    /*font-family: 'Cedarville Cursive', cursive;*/
+    /*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Cinzel Decorative', cursive;
+    line-height: 1.8;
+    color: #fffacd;
+}
+
+/*/_HechizoPopup/*/
+
+.hechizo-btn {
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #9C27B0, #E91E63);
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 15px #E1BEE7;
+    animation: resplandor 2s infinite alternate;
+}
+
+@keyframes resplandor {
+    from {
+        box-shadow: 0 0 10px #BA68C8;
+    }
+
+    to {
+        box-shadow: 0 0 20px #F06292;
+    }
+}
+
+.hechizo-popup {
+    background: radial-gradient(circle at top left, #512DA8, #311B92);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #B39DDB;
+    padding: 30px;
+}
+
+.hechizo-texto {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+
+
+/*/_TriviaIsis/*/
+
+.trivia-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff20;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+    .trivia-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px #FFD70080;
+    }
+
+.trivia-icon {
+    font-size: 2.5rem;
+    animation: levitar 2s ease-in-out infinite alternate;
+}
+
+@keyframes levitar {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/*/_Galeria/*/
+
+.galeria-img {
+    width: 100%;
+    height: 500px; /* O ajusta a la altura que desees */
+    object-fit: cover; /* Rellena sin deformar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+
+    .galeria-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #FFD700aa;
+    }
+#lightboxImg {
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#lightboxImg {
+    max-height: 80vh;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.3);
+}
+
+    #lightboxImg.loaded {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+/* Efecto mágico al fondo del modal */
+#lightboxModal .modal-content {
+    position: relative;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.8), rgba(0,0,0,0.95));
+    overflow: hidden;
+}
+
+    #lightboxModal .modal-content::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
+        animation: magicLight 6s linear infinite;
+        z-index: 0;
+    }
+@keyframes magicLight {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#lightboxModal .modal-body {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes hechizo-aparece {
+    0% {
+        opacity: 0;
+        transform: scale(0.85) rotate(-2deg);
+        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        transform: scale(1.02) rotate(1deg);
+        box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes hechizo-desaparece {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.modal-magic-show {
+    animation: hechizo-aparece 0.6s ease forwards;
+}
+
+.modal-magic-hide {
+    animation: hechizo-desaparece 0.4s ease forwards;
+}
+
+/*/PastesYCuenta/*/
+.pastel-magico {
+    position: relative;
+    z-index: 1;
+}
+
+.hechizo-texto {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #fff8dc;
+    text-shadow: 1px 1px 4px #ff69b4;
+}
+
+.pastel-img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px 8px rgba(255, 223, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+    .pastel-img:hover {
+        transform: scale(1.05);
+    }
+
+.btn-hechizo {
+    font-size: 1.2rem;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #ffd700aa;
+}
+
+.chispas-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.chispa {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #fffacd, #ff69b4, #ff1493);
+    position: absolute;
+    border-radius: 50%;
+    animation: chispaVuelo 1s ease-out forwards;
+}
+
+@keyframes chispaVuelo {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.5) translateY(-100px) rotate(360deg);
+    }
+}
+
+
+
+/*//*/
+.mensaje-especial,
+.trivia-card,
+.hechizo-popup,
+.pastel-container,
+.container-magica {
+    background: rgba(0, 0, 0, 0.65); /* Más oscuro */
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+
+/**/
+.contenido-magico {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+/*.mensaje-texto,
+p,
+h2,
+h3 {
+    text-shadow: 1px 1px 2px #000000;
+    font-size: 1.3rem;
+    line-height: 1.8;
+}*/
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+
+.modal {
+    z-index: 1055 !important;
+}
+
+.modal-content {
+    z-index: 1060 !important;
+}
+
+
+
+/* Efecto temblor pastel */
+.temblor {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Humo mágico */
+.humo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ccc 0%, transparent 70%);
+    opacity: 0.4;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: humoSube 2s ease-out forwards;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+@keyframes humoSube {
+    from {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0;
+    }
+}
+
+
+
+/* 🔥 Velitas */
+#velitas {
+  font-size: 2rem;
+  margin-top: 20px;
+  animation: parpadeo 1s infinite alternate;
+}
+
+@keyframes parpadeo {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+/* ✨ Confeti */
+#confetiCanvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}

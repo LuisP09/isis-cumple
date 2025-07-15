@@ -82,7 +82,7 @@
             <p class="lead">Algunas curiosidades mágicas sobre nuestra homenajeada ✨</p>
           </div>
           <div class="row justify-content-center g-4">
-            <div class="col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card trivia-card text-center h-100">
                 <div class="card-body">
                   <div class="trivia-icon mb-3">🌟</div>
@@ -91,7 +91,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card trivia-card text-center h-100">
                 <div class="card-body">
                   <div class="trivia-icon mb-3">💚🐍</div>
@@ -100,7 +100,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card trivia-card text-center h-100">
                 <div class="card-body">
                   <div class="trivia-icon mb-3">🧁</div>
@@ -109,7 +109,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card trivia-card text-center h-100">
                 <div class="card-body">
                   <div class="trivia-icon mb-3">🦄</div>
@@ -128,13 +128,12 @@
             <p class="lead">Algunos momentos que hacen tu historia tan especial 💖</p>
           </div>
           <div class="row g-3 justify-content-center">
-            <!-- Reemplaza con tus imágenes reales -->
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <a href="images/galeria/isis.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="images/galeria/isis.jpg">
+            <div class="col-6 col-md-4 col-lg-3" >
+              <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="images/galeria/isis.jpg">
                 <img src="images/galeria/isis.jpg" class="img-fluid img-thumbnail galeria-img" alt="Recuerdo mágico" />
               </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
+             <div class="col-sm-6 col-md-4 col-lg-3">
               <a href="images/galeria/isis1.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="images/galeria/isis1.jpg">
                 <img src="images/galeria/isis1.jpg" class="img-fluid img-thumbnail galeria-img" alt="Recuerdo mágico" />
               </a>
@@ -169,7 +168,7 @@
                 <img src="images/galeria/isis7.jpg" class="img-fluid img-thumbnail galeria-img" alt="Recuerdo mágico" />
               </a>
             </div>
-            <!-- Agrega más divs como este para más imágenes -->
+            <!-- Repite más imágenes aquí -->
           </div>
         </section>
 
@@ -190,17 +189,11 @@
           <p class="lead hechizo-texto">Hoy celebramos la magia de tu existencia ✨ Que el amor, la alegría y los hechizos bonitos te acompañen siempre 💖</p>
           <div class="mt-4">
             <img id="pastelImg" src="images/pastel_magico.png" class="pastel-img img-fluid" alt="Pastel mágico de cumpleaños" />
-
           </div>
           <button class="btn btn-warning btn-hechizo mt-4" id="btnSoplar">🎂 Soplar las velitas</button>
           <div id="hechizoChispas" class="chispas-container"></div>
-
-          <!-- Icono de velitas animadas (puede ser una imagen o un div decorado) -->
-            <div id="velitas" class="velitas-encendidas">🕯️🕯️🕯️</div>
-
-            <!-- Confeti -->
-            <canvas id="confetiCanvas"></canvas>
-
+          <div id="velitas" class="velitas-encendidas">🕯️🕯️🕯️</div>
+          <canvas id="confetiCanvas"></canvas>
         </section>
 
       </div>
@@ -224,6 +217,5 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="js/site.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </body>
 </html>

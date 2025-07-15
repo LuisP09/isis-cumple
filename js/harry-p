@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'Harry P';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Harry P'), url('https://fonts.cdnfonts.com/s/17898/HARRYP__.woff') format('woff');
-}
-
-
